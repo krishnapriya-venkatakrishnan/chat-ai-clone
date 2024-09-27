@@ -1,6 +1,19 @@
 import bot from './assets/bot.svg'
 import user from './assets/user.svg'
 
+function setVh() {
+    const appElement = document.getElementById('app');
+
+    // Set the height of the element to the inner height of the window
+    appElement.style.height = `${window.innerHeight}px`;
+}
+
+// Initial set
+setVh();
+
+// Update the value on resize
+window.addEventListener('resize', setVh);
+
 const form = document.querySelector('form')
 const chatContainerEl = document.querySelector('#chat-container')
 
